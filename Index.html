@@ -41,6 +41,22 @@
             max-width: 100%;
             height: auto;
         }
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #00e676;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
             nav a {
                 display: block;
@@ -91,6 +107,14 @@
         <p>Salma is certified to cook and sell food in the state of Texas.</p>
         <img src="path-to-certificate-image" alt="Certification">
     </div>
+    
+    <footer>
+        <p>Contact us at: <a href="tel:+16825528728">682 552 8728</a></p>
+        <p><a href="https://wa.me/16825528728" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20"> Join our WhatsApp group
+        </a></p>
+        <p><a href="https://www.zellepay.com/" target="_blank">Place orders via Zelle</a></p>
+    </footer>
     
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
