@@ -4,95 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mom's Catering</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f9f9f9;
-        }
-        nav {
-            width: 100%;
-            background-color: #333;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
-        .menu-icon {
-            display: none;
-            cursor: pointer;
-            color: white;
-            position: absolute;
-            right: 20px;
-        }
-        .menu-icon div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 5px 0;
-        }
-        .menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .section {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px 0;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .section img {
-            max-width: 100%;
-            height: auto;
-        }
-        footer {
-            width: 100%;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        footer a {
-            color: #00e676;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 600px) {
-            nav .menu {
-                display: none;
-                flex-direction: column;
-            }
-            nav a {
-                display: block;
-                padding: 10px;
-            }
-            .menu-icon {
-                display: block;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <nav>
@@ -117,12 +29,12 @@
     
     <div class="section" id="weekly-menu">
         <h2>Weekly Menu</h2>
-        <img src="Beige Simple Weekly Menu.png" alt="Menu Week of 7/8">
+        <img src="images/Beige Simple Weekly Menu.png" alt="Menu Week of 7/8">
     </div>
     
     <div class="section" id="about-mom">
         <h2>About Mom</h2>
-        <img src="https://via.placeholder.com/150" alt="Mom">
+        <img src="images/placeholder-mom.jpg" alt="Mom">
         <p>Salma has been a chef for over 25 years, bringing love and tradition to every dish she prepares.</p>
     </div>
     
@@ -150,7 +62,7 @@
     <div class="section" id="certification">
         <h2>Certification</h2>
         <p>Salma is certified to cook and sell food in the state of Texas.</p>
-        <img src="path-to-certificate-image" alt="Certification">
+        <img src="images/path-to-certificate-image.jpg" alt="Certification">
     </div>
     
     <footer>
@@ -161,7 +73,6 @@
         <p><a href="https://www.zellepay.com/" target="_blank">Place orders via Zelle</a></p>
     </footer>
     
-    <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.menu');
-            if (menu.style.display === 'flex' || menu.style.display === '') {
+    <script src="js/scripts.js"></script>
+</body>
+</html>
