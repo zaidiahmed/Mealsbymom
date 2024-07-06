@@ -34,8 +34,6 @@ nav a:hover {
     display: none;
     cursor: pointer;
     color: white;
-    position: absolute;
-    right: 20px;
 }
 
 .menu-icon div {
@@ -98,5 +96,7 @@ footer a:hover {
 
     .menu-icon {
         display: block;
+        position: static;
+        margin: 0 auto;
     }
 }
