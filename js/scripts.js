@@ -11,5 +11,9 @@ function toggleMenu() {
 // Initialize the menu display state for mobile devices
 document.addEventListener('DOMContentLoaded', function() {
     var menu = document.querySelector('.menu');
-    menu.style.display = 'none';
+    if (window.innerWidth <= 600) {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
 });
