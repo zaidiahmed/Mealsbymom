@@ -19,6 +19,7 @@
             background-color: #333;
             text-align: center;
             padding: 10px 0;
+            position: relative;
         }
         nav a {
             color: white;
@@ -28,6 +29,22 @@
         }
         nav a:hover {
             background-color: #575757;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            color: white;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .section {
             width: 90%;
@@ -58,20 +75,37 @@
             text-decoration: underline;
         }
         @media (max-width: 600px) {
+            nav .menu {
+                display: none;
+                flex-direction: column;
+            }
             nav a {
                 display: block;
                 padding: 10px;
+            }
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 20px;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#weekly-menu">Weekly Menu</a>
-        <a href="#about-mom">About Mom</a>
-        <a href="#ingredients">Ingredients</a>
-        <a href="#certification">Certification</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#weekly-menu">Weekly Menu</a>
+            <a href="#about-mom">About Mom</a>
+            <a href="#ingredients">Ingredients</a>
+            <a href="#certification">Certification</a>
+        </div>
     </nav>
     
     <div class="section" id="home">
@@ -81,13 +115,44 @@
     
     <div class="section" id="weekly-menu">
         <h2>Weekly Menu</h2>
-        <p>Our delicious menu for the week:</p>
         <ul>
-            <li>Monday: Chicken Biryani</li>
-            <li>Tuesday: Beef Stroganoff</li>
-            <li>Wednesday: Vegetarian Lasagna</li>
-            <li>Thursday: Lamb Kebab</li>
-            <li>Friday: Grilled Salmon</li>
+            <li>
+                <strong>MONDAY</strong>
+                <p>AVAILABLE DAILY</p>
+                <p>Chicken Mandi - 3pc Chicken Quarters, Homemade Chutney - $19.99</p>
+            </li>
+            <li>
+                <strong>TUESDAY</strong>
+                <p>Kofta Aloo Salan (24oz), Homemade Roti (2) - $19.99</p>
+            </li>
+            <li>
+                <strong>WEDNESDAY</strong>
+                <p>Creamy Butter Chicken, White Rice, Homemade Roti (2) - $22.99</p>
+            </li>
+            <li>
+                <strong>THURSDAY</strong>
+                <p>Mash Daal (16oz), Chicken 65 (8oz), Plain Paratha (2) - $19.99</p>
+                <p>Boti Roll w/paratha - $9.99</p>
+                <p>Bun Kabab - without egg: $5.99, with egg: $6.99</p>
+                <p>Chicken Samosas - 1 dozen frozen: $16, 1 dozen Cooked: $20</p>
+                <p>Chicken Shami Kababs - Frozen: $2.50 each, Organic*: $3.00 each</p>
+                <p>Beef Shami Kababs - Frozen: $3.00 each, Organic*: $3.50 each</p>
+                <p>Chicken Spring Rolls - 1 dozen frozen: $20, 1 dozen Cooked: $24</p>
+                <p>Chicken Puff Pastry - $2.99 each</p>
+                <p>Fresh Chapati/Roti - 20 rotis: $12</p>
+                <p>Ulta Tawa/Rumali Roti - 20 rotis: $18</p>
+                <p>Paratha - Plain: $2.50 each, Keema: $3.99 each, Aloo: $3.49 each</p>
+            </li>
+            <li>
+                <strong>FRIDAY</strong>
+                <p>Tandoori Chicken Malai Boti (7pcs), Homemade Chutney, Homemade Plain Parathas (2) - $19.99</p>
+            </li>
+            <li>
+                <strong>SATURDAY & SUNDAY</strong>
+                <p>TO ORDER - Confirm via Zelle 682-552-8728. Be sure to mention your name on the note.</p>
+                <p>See Our Catering Menu for Weekend Orders</p>
+                <p>We use only organic certified olive oil and Zabiha halal hand-slaughtered meat.</p>
+            </li>
         </ul>
     </div>
     
@@ -96,7 +161,8 @@
         <img src="https://via.placeholder.com/150" alt="Mom">
         <p>Salma has been a chef for over 25 years, bringing love and tradition to every dish she prepares.</p>
     </div>
-        <div class="section" id="ingredients">
+    
+    <div class="section" id="ingredients">
         <h2>Ingredients</h2>
         <p>We use 100% organic ingredients and spices in our meals. We source only Zabiha Halal hand-slaughtered meat.</p>
         <ul>
@@ -124,22 +190,14 @@
     </div>
     
     <footer>
-        <p>Contact us at: <a href="tel:+16825528728">682 552 8728</a></p>
-        <p><a href="https://wa.me/16825528728" target="_blank">
+        <p>Contact us at: <a href="tel:+1234567890">+1 234 567 890</a></p>
+        <p><a href="https://wa.me/1234567890" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20"> Join our WhatsApp group
         </a></p>
         <p><a href="https://www.zellepay.com/" target="_blank">Place orders via Zelle</a></p>
     </footer>
     
     <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            if (menu.style.display === 'flex' || menu.style.display === '') {
