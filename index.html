@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mom's Catering</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .daily-menu {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+        .daily-menu h2 {
+            text-align: center;
+            color: #d35400;
+            margin-bottom: 20px;
+        }
+        .daily-menu table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .daily-menu th, .daily-menu td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .daily-menu td.price {
+            text-align: right;
+        }
+        .daily-menu th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -34,25 +65,86 @@
         <p><strong>Weekly Menu</strong></p>
         <p>Please see pictures for sizing references <a href="https://postimg.cc/gallery/ZpkzHPK" target="_blank">here</a></p>
         <p>Weekends are for large tray catering orders only.</p>
-        <p><strong>Made fresh upon order any day of the week:</strong></p>
-        <p>8oz mawa Rabdi kheer w nuts - $4.99</p>
-        <p>16oz - $8.99</p>
-        <p>32oz - $18</p>
-        <p>1 dozen frozen chicken samosa: $16, Cooked: $20</p>
-        <p>Chicken Shami Kabab - $2.50 each frozen, $3.00 each cooked w/ organic oil/eggs</p>
-        <p>Beef shami Kabab - $3.00 each frozen, $3.50 each cooked w/ organic eggs and certified organic oil only</p>
-        <p>1 dozen chicken spring rolls - frozen $20, Cooked: $24</p>
-        <p>Fresh chapati/roti: 20 rotis for $12</p>
-        <p>Ulta tawa/rumali roti: 20 for $18</p>
-        <p>Chicken puff pastry: $2.99 each</p>
-        <p>Anda wala bun kabab - $5.99 w/ fried egg, Tomatoe onion cucumber chutney, and sesame bun</p>
-        <p>Beef Aloo chop patty - $3.99 each</p>
-        <p>Many more… message us</p>
+        <p><strong>Made fresh upon order any day of the week</strong></p>
+        
     </div>
     
     <div class="section" id="weekly-menu">
         <h2>Weekly Menu</h2>
         <img src="images/Menu_7_8" alt="Menu Week of 7/8">
+        <div class="daily-menu">
+            <h2>Available Daily</h2>
+            <table>
+                <tr>
+                    <td>Boti Roll w/paratha</td>
+                    <td class="price">$9.99</td>
+                </tr>
+                <tr>
+                    <td>Bun Kabab (without egg)</td>
+                    <td class="price">$5.99</td>
+                </tr>
+                <tr>
+                    <td>Bun Kabab (with egg)</td>
+                    <td class="price">$6.99</td>
+                </tr>
+                <tr>
+                    <td>Chicken Samosas (1 dozen frozen)</td>
+                    <td class="price">$16</td>
+                </tr>
+                <tr>
+                    <td>Chicken Samosas (1 dozen cooked)</td>
+                    <td class="price">$20</td>
+                </tr>
+                <tr>
+                    <td>Chicken Shami Kababs (frozen)</td>
+                    <td class="price">$2.50 each</td>
+                </tr>
+                <tr>
+                    <td>Chicken Shami Kababs (cooked)</td>
+                    <td class="price">$3.00 each</td>
+                </tr>
+                <tr>
+                    <td>Beef Shami Kababs (frozen)</td>
+                    <td class="price">$3.00 each</td>
+                </tr>
+                <tr>
+                    <td>Beef Shami Kababs (cooked)</td>
+                    <td class="price">$3.50 each</td>
+                </tr>
+                <tr>
+                    <td>Chicken Spring Rolls (1 dozen frozen)</td>
+                    <td class="price">$20</td>
+                </tr>
+                <tr>
+                    <td>Chicken Spring Rolls (1 dozen cooked)</td>
+                    <td class="price">$24</td>
+                </tr>
+                <tr>
+                    <td>Chicken Puff Pastry</td>
+                    <td class="price">$2.99 each</td>
+                </tr>
+                <tr>
+                    <td>Fresh Chapati/Roti (20 rotis)</td>
+                    <td class="price">$12</td>
+                </tr>
+                <tr>
+                    <td>Ulta Tawa/Rumali Roti (20 rotis)</td>
+                    <td class="price">$18</td>
+                </tr>
+                <tr>
+                    <td>Paratha (Plain)</td>
+                    <td class="price">$2.50 each</td>
+                </tr>
+                <tr>
+                    <td>Paratha (Keema)</td>
+                    <td class="price">$3.99 each</td>
+                </tr>
+                <tr>
+                    <td>Paratha (Aloo)</td>
+                    <td class="price">$3.49 each</td>
+                </tr>
+            </table>
+        </div>
     </div>
     
     <div class="section" id="about-mom">
